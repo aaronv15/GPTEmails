@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui" onLoad="Ribbon_Load">
+  <ribbon>
+    <tabs>
+		<tab id="CustomRibbon" label="Transform">
+		  <group id="ControlGroup" label="Control">
+			  <dropDown id="signaturesDropDown" label="Signatures" getItemCount="SignaturesDropDown_GetItemCount" getItemLabel="SignaturesDropDown_GetItemLabel" onAction="SignatureDropDown_OnAction" />
+			  <separator/>
+			  <dropDown id="TemplateDropdown" label="Template" onAction="TemplateDropdown_OnAction">
+				  <item id="Prompt" label="Self Prompt"/>
+				  <item id="Prettify" label="Prettify"/>
+				  <item id="Workplace" label="Workplace"/>
+				  <item id="Fancy" label="Fancy"/>
+				  <item id="Child" label="Child"/>
+			  </dropDown>
+			  <dropDown id="LanguageDropdown" label="Language" onAction="LanguageDropdown_OnAction">
+				  <item id="English" label="English"/>
+				  <item id="Spanish" label="Spanish"/>
+				  <item id="French" label="French"/>
+				  <item id="Klingon" label="Klingon"/>
+			  </dropDown>
+		  </group>
+			<group id="RunGroup" label="Transform">
+				<button id="RunButton" label="Transform" onAction="RunButton_OnAction"/>
+			</group>
+			<group id="VersionControl" label="Revert">
+				<button id="UndoButton" label="Undo" onAction="UndoButton_OnAction"/>
+				<button id="RedoButton" label="Redo" onAction="RedoButton_OnAction"/>
+			</group>
+			<group id="Save" label="Save">
+				<button id="SaveButton" label="Save Settings" onAction="SaveButton_OnAction"/>
+				<button id="LoadDefault" label="Load Defualt" onAction="LoadDefault_OnAction"/>
+			</group>
+			<group id="Toggle" label="On/Off">
+				<toggleButton id="ToggleButton" label="On/Off" onAction="ToggleButton_OnAction" getPressed="GetToggleButtonPressed" />
+			</group>
+      </tab>
+    </tabs>
+  </ribbon>
+</customUI>
+
