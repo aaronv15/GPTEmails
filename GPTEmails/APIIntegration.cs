@@ -21,7 +21,7 @@ namespace GPTEmails
 
         public APIIntegration() 
         {
-            api = new OpenAIAPI("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");
+            api = new OpenAIAPI("API_KEY");
             chat = api.Chat.CreateConversation();
             chat.AppendSystemMessage("You are here to help write people emails. I already have a signature so do not append a sender. Do not include a subject in the email");
         }
